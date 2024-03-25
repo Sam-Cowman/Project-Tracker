@@ -15,7 +15,17 @@ function displayTime() {
 function readProjectsFromStorage() {
   
   // TODO: Retrieve projects from localStorage and parse the JSON to an array. If there are no projects in localStorage, initialize an empty array and return it.
+// Retrieve projects from localStorage
+var projectsJSON = localStorage.getItem("projects");
 
+// Check if there are projects in localStorage
+if (projectsJSON) {
+    // Parse the JSON string to an array
+    return JSON.parse(projectsJSON);
+} else {
+    // If no projects in localStorage, initialize an empty array
+    return [];
+}
 }
 
 // TODO: Create a function that accepts an array of projects, stringifys them, and saves them in localStorage.
@@ -25,10 +35,24 @@ function readProjectsFromStorage() {
 function createProjectCard(project) {
 
   // TODO: Create a new card element and add the classes `card`, `project-card`, `draggable`, and `my-3`. Also add a `data-project-id` attribute and set it to the project id.
+  const newCardEl = ('newCard');
+  newCardEl.addclass =('card project-card draggable my-3');
+
+  const projectId = ('Spade')
+  newCardEl.attr = ('Spade' )
+
   // TODO: Create a new card header element and add the classes `card-header` and `h4`. Also set the text of the card header to the project name.
+  const cheaderEl = ('cardHeader');
+  cheaderEl.addclass = ('card-header h4');
   // TODO: Create a new card body element and add the class `card-body`.
+const cbody = ('cbody');
+cbody.addclass = ('card-body');
+
   // TODO: Create a new paragraph element and add the class `card-text`. Also set the text of the paragraph to the project type.
+  const heart = ('<p>')
+  heart.text = ('project type')
   // TODO: Create a new paragraph element and add the class `card-text`. Also set the text of the paragraph to the project due date.
+  $("p").addclass('card-text')
   // TODO: Create a new button element and add the classes `btn`, `btn-danger`, and `delete`. Also set the text of the button to "Delete" and add a `data-project-id` attribute and set it to the project id.
 
 
